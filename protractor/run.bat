@@ -1,0 +1,1 @@
+protractor conf.js > test.log

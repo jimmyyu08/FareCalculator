@@ -1,0 +1,33 @@
+﻿<script src="../../Scripts/angular.js"></script>
+<script src="../../Scripts/angular-route.js"></script>
+<script src="../../Scripts/FareApp.js"></script>
+
+<div id="body" ng-app="fareApp">
+    <div ng-controller="myCtrl">
+        <form ng-submit="ButtonClick()">
+            <br>
+            <label>State</label>
+            <input type="text" name="state" ng-model="ride.state" required />
+
+            <br>
+            <label>Miles traveled under 6 mph</label>
+            <input type="number" name="miles" ng-model="ride.miles" required />
+
+            <br>
+            <label>Minutes traveled over 6 mph</label>
+            <input type="number" name="minutes" ng-model="ride.minutes" required />
+            <br />
+
+            <label>Ride Date</label>
+            <input type="date" name="ridedate" ng-model="ride.ridedate" required />
+
+            <br />
+            <label>Ride Time</label>
+            <input type="time" name="ridetime" ng-model="ride.ridetime" required />
+            <br />
+
+            <button type="submit" id="calc">Calculate</button>
+        </form>
+        <div id="result" ng-show="cost">Cost: ${{cost}}</div>
+    </div>
+</div>
